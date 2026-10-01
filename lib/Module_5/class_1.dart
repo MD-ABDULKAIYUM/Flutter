@@ -55,7 +55,19 @@ class Module6class1 extends StatelessWidget {
 
         ],
       ),
+// floatingActionButton: FloatingActionButton(onPressed: (){
+//
+// },
+// child: Icon(Icons.add),),
 
+    // extend korle textsho add kora jai
+    floatingActionButton: FloatingActionButton.extended(onPressed: (){
+
+    },
+    icon: Icon(Icons.add),
+      label: Text('Add'),
+
+    ),
     );
   }
 }
