@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'Basic_Widget_Layout_System.dart';
 import 'Gridv.dart';
 import 'class_2.dart';
+import 'class_3.dart';
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Kaiyum er App',
-      home:Gridv(),
+      home:Module_6Class_3(),
     );
   }
 }
