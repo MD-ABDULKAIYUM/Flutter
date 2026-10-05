@@ -23,6 +23,9 @@ class Gridv extends StatelessWidget {
             child: Column(
               mainAxisAlignment:MainAxisAlignment.center,
               children: [
+                ElevatedButton(onPressed: (){
+                  Navigator.pop(context);
+                }, child: Text('Next')),
                 Icon(Icons.phone),
                 Text('Cash Out',
                   style: TextStyle(
