@@ -6,6 +6,8 @@ import 'package:first_forject/Module_6/class_1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../Module_7/Assignment_7.dart';
+import '../Module_7/Assignment_8.dart';
 import '../Module_7/botton_nav.dart';
 import 'Basic_Widget_Layout_System.dart';
 import 'Gridv.dart';
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
       builder: (context,child) {
         return MaterialApp(
           title: 'Kaiyum er App',
-          home: botton_nav(),
+          home: Assignment8(),
         );
 
       },
