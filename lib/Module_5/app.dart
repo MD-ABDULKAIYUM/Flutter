@@ -8,7 +8,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../Module_7/Assignment_7.dart';
 import '../Module_7/Assignment_8.dart';
+import '../Module_7/LiveTest1.dart';
 import '../Module_7/botton_nav.dart';
+import '../Module_7/tab_b.dart';
+import '../Module_9/crud_flygrund.dart';
 import 'Basic_Widget_Layout_System.dart';
 import 'Gridv.dart';
 import '../Module_7/Module7Class2.dart';
@@ -27,8 +30,12 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context,child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            scaffoldBackgroundColor: Colors.white
+          ),
           title: 'Kaiyum er App',
-          home: Assignment8(),
+          home: crud_flygrund(),
         );
 
       },

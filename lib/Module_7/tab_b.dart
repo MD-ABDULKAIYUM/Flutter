@@ -18,16 +18,16 @@ class _tab_bState extends State<tab_b> {
           title: Text('KAIYUM'),
           bottom: TabBar(
               indicator: BoxDecoration(
-                color: Colors.lightGreen.shade200,
+                color: Colors.lightGreen.shade300,
                 borderRadius: BorderRadius.circular(15)
                     
               ),
-              indicatorPadding: EdgeInsets.all(1),
-              labelColor: Colors.lightGreen,
-              unselectedLabelColor: Colors.black,
+              indicatorPadding: EdgeInsets.all(0),
+              labelColor: Colors.red,
+              unselectedLabelColor: Colors.white,
               unselectedLabelStyle: TextStyle(
-                decoration: TextDecoration.underline,
-                fontSize: 15,
+                // decoration: TextDecoration.underline,
+                fontSize: 13,
               ),
 
               tabs: [
@@ -39,6 +39,7 @@ class _tab_bState extends State<tab_b> {
             Tab(
               icon: Icon(Icons.favorite),
               text: 'favarite',
+
 
             ),
             Tab(
