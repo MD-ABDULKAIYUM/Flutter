@@ -113,6 +113,18 @@ class _Assignment9State extends State<Assignment9> {
 
   }
 
+  Future<void> searchStudent(String name)async{
+    Database db = await OpenMydatabase();
+    List<Map<String,dynamic>> result =await db.query(
+      'student',
+      where: 'name LIKE ?',
+      whereArgs: ['%name%'],
+    );
+    setState(() {
+
+    });
+  }
+
   Future<void> startedting(Map<String,dynamic> student) async{
     setState(() {
       edtingid = student['id'];
@@ -163,7 +175,7 @@ class _Assignment9State extends State<Assignment9> {
 
             ),
             TextField(
-              controller: namecontroller,
+              controller: phonecontroller,
               decoration: InputDecoration(
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15)
@@ -173,7 +185,7 @@ class _Assignment9State extends State<Assignment9> {
             ),
         
             TextField(
-              controller: namecontroller,
+              controller: emailcontroller,
               decoration: InputDecoration(
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15)
@@ -183,7 +195,7 @@ class _Assignment9State extends State<Assignment9> {
             ),
         
             TextField(
-              controller: namecontroller,
+              controller: addresscontroller,
               decoration: InputDecoration(
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15)
@@ -199,11 +211,26 @@ class _Assignment9State extends State<Assignment9> {
                 ),
 
                 child: Text(edtingid==null?'ADD':'UPDATE')),
-            ListView.builder(
-              itemCount: student.length,
-              itemBuilder: (context,index){
-                Map<String,dynamic> Student =student[index];
-              }
+            Expanded(
+              child: ListView.builder(
+                itemCount: student.length,
+                itemBuilder: (context,index){
+                  Map<String,dynamic> Student =student[index];
+                  return ListTile(
+                    leading: Container(
+                      width: 30,
+                      height: 30,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(23),
+                      ),
+                      child:Align(
+                        alignment: Alignment.center,
+                        child: Text(Student['id']),
+                      )
+              
+                  ));
+                }
+              ),
             )
 
         
